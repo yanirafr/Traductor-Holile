@@ -31,6 +31,13 @@
     margin-top: 50px;
   }
   &__user-input {
+    &__count {
+      color: rgb(197, 197, 197);
+      text-align: right;
+      font-size: 10px;
+      margin-right: 5px;
+      transform: translateY(-3px);
+    }
     @media (min-width: 768px) {
       align-self: flex-start;
     }

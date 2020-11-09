@@ -69,6 +69,9 @@ class App extends Component {
             <div className="container">
               <div className="container__user-input talkbubble1">
                 <UserInput sendText={this.TranslateText} />
+                <p className="container__user-input__count">
+                  {this.translation.length} / 280
+                </p>
               </div>
               <div className="container__translation talkbubble2">
                 <p className="translation">{this.translation}</p>
