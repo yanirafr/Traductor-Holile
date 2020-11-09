@@ -9,7 +9,6 @@ class UserInput extends Component {
 
   HandleInput(ev) {
     this.userText = ev.currentTarget.value;
-    // console.log(this.userText);
     this.props.sendText(this.userText);
     this.forceUpdate();
   }
