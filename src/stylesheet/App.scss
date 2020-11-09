@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.main {
+  margin: auto;
+  width: 800px;
+  font-family: "Open Sans", sans-serif;
+}
+.title {
+  margin-top: 100px;
+  text-align: center;
+  padding: 20px;
+  text-transform: uppercase;
+  color: rgb(80, 4, 87);
+  font-weight: 800;
+  text-shadow: 2px 2px rgb(98, 146, 223);
+}
+.container {
+  height: 500px;
+  display: flex;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr;
+  padding: 15px;
+  background-color: rgb(111, 97, 189);
+}
+
+.user-input {
+  padding: 10px;
+  width: 380px;
+}
+
+.translation {
+  background-color: white;
+  overflow: auto;
+  width: 380px;
+  margin-left: 20px;
+  padding: 10px;
+  font-size: 14px;
+}

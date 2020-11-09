@@ -20,8 +20,9 @@ class UserInput extends Component {
         className="user-input"
         name="user-input"
         id="user-input"
-        cols="30"
-        rows="10"
+        cols="50"
+        rows="20"
+        placeholder="Ej: Hola chicos"
       ></textarea>
     );
   }

@@ -22,44 +22,49 @@ class App extends Component {
 
       // HOLA
       if (savedWords[word] === "hola") {
-        changeWords.push("holi ");
+        changeWords.push("holi");
+      } else if (savedWords[word] === "Hola") {
+        changeWords.push("Holi");
       }
       // COS / CAS
       else if (lastThrLetters === "cos" || lastThrLetters === "cas") {
         changeWords.push(
-          savedWords[word].substr(0, wordLength - 2).concat("ques ")
+          savedWords[word].substr(0, wordLength - 2).concat("ques")
         );
       }
       // CO / CA
       else if (lastTwoLetters === "co" || lastTwoLetters === "ca") {
         changeWords.push(
-          savedWords[word].substr(0, wordLength - 1).concat("que ")
+          savedWords[word].substr(0, wordLength - 1).concat("que")
         );
       }
       // OS / AS
       else if (lastTwoLetters === "os" || lastTwoLetters === "as") {
         changeWords.push(
-          savedWords[word].substr(0, wordLength - 1).concat("es ")
+          savedWords[word].substr(0, wordLength - 1).concat("es")
         );
       }
       // O / A
       else if (lastLetter === "o" || lastLetter === "a") {
-        changeWords.push(savedWords[word].substr(0, wordLength).concat("e "));
+        changeWords.push(savedWords[word].substr(0, wordLength).concat("e"));
       }
       // Else
       else {
         changeWords.push(savedWords[word]);
       }
     }
-    this.translation = changeWords.toString().replace(",", " ");
+    this.translation = changeWords.join(" ");
   }
 
   render() {
     return (
-      <div className="container">
-        <UserInput sendText={this.TranslateText} />
-        <p className="translation">{this.translation}</p>
-      </div>
+      <main className="main">
+        <h1 className="title">Traductor Lelele</h1>
+        <div className="container">
+          <UserInput sendText={this.TranslateText} />
+          <p className="translation">{this.translation}</p>
+        </div>
+      </main>
     );
   }
 }
