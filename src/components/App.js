@@ -74,7 +74,7 @@ class App extends Component {
                 <p className="translation">{this.translation}</p>
               </div>
             </div>
-            <div className="tweet-btn">
+            <div className="tweet-btn" title="Comparte en Twitter">
               <a
                 className="tweet-btn__link"
                 href={"https://twitter.com/intent/tweet?text=" + this.tweet}

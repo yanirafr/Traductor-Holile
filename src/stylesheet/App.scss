@@ -5,33 +5,40 @@
 .title {
   text-align: center;
   padding: 20px;
-  font-size: 60px;
   color: #4a1f4e;
   font-weight: 800;
   font-family: "Niconne", cursive;
   text-shadow: 2px 2px #73a7d1;
+  font-size: 60px;
 }
 .main {
+  width: 100%;
   &__box {
     margin: auto;
-    width: 800px;
     font-family: "Open Sans", sans-serif;
+    @media (min-width: 768px) {
+      width: 800px;
+    }
   }
 }
 .container {
-  margin-top: 50px;
   height: 500px;
   display: flex;
   flex-direction: column;
-  grid-template-columns: 2fr;
-  grid-template-rows: 1fr;
-  padding: 20px;
+  align-items: center;
   justify-content: space-around;
+  @media (min-width: 768px) {
+    margin-top: 50px;
+  }
   &__user-input {
-    align-self: flex-start;
+    @media (min-width: 768px) {
+      align-self: flex-start;
+    }
   }
   &__translation {
-    align-self: flex-end;
+    @media (min-width: 768px) {
+      align-self: flex-end;
+    }
   }
 }
 
@@ -55,11 +62,14 @@
 
 .tweet-btn {
   width: 100px;
-  margin: auto;
+  margin: 30px auto 30px auto;
   text-align: center;
-  margin-top: 30px;
   padding: 5px;
   background-color: #1da1f2;
+  cursor: pointer;
+  &:active {
+    background-color: blue;
+  }
   &__link {
     text-decoration: none;
     color: white;
