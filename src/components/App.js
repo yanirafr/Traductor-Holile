@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../stylesheet/bubble.scss";
 import "../stylesheet/App.scss";
 import UserInput from "./UserInput";
 
@@ -54,17 +55,38 @@ class App extends Component {
       }
     }
     this.translation = changeWords.join(" ");
+    this.tweet = encodeURIComponent(this.translation);
   }
 
   render() {
     return (
-      <main className="main">
-        <h1 className="title">Traductor Lelele</h1>
-        <div className="container">
-          <UserInput sendText={this.TranslateText} />
-          <p className="translation">{this.translation}</p>
-        </div>
-      </main>
+      <>
+        <header className="header">
+          <h1 className="title">Traductor Holilé</h1>
+        </header>
+        <main className="main">
+          <div className="main__box">
+            <div className="container">
+              <div className="container__user-input talkbubble1">
+                <UserInput sendText={this.TranslateText} />
+              </div>
+              <div className="container__translation talkbubble2">
+                <p className="translation">{this.translation}</p>
+              </div>
+            </div>
+            <div className="tweet-btn">
+              <a
+                className="tweet-btn__link"
+                href={"https://twitter.com/intent/tweet?text=" + this.tweet}
+                title="Comparte en Twitter"
+                target="_blank"
+              >
+                <i class="fab fa-twitter"></i> Tweet!
+              </a>
+            </div>
+          </div>
+        </main>
+      </>
     );
   }
 }
