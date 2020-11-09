@@ -8,4 +8,4 @@ En el ejercicio se nos pedía crear un **traductor** que sustituyese las vocales
 
 En su lugar, en esta versión decidí **cambiar las últimas letras** de las palabras que acaban por "a, o, as, os, ca y co" por sus correspondientes acabadas en e, además de cambiar la palabra "hola" por "holi".
 
-Este ejercicio fue realizado con **React** y **SCSC**.
+Este ejercicio fue realizado con **React** y **SCSS**.
