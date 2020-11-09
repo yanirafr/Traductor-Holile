@@ -15,13 +15,14 @@ class UserInput extends Component {
 
   render() {
     return (
-      <input
+      <textarea
         onChange={this.HandleInput}
-        type="text"
         className="user-input"
         name="user-input"
         id="user-input"
-      />
+        cols="30"
+        rows="10"
+      ></textarea>
     );
   }
 }
