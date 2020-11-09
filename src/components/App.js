@@ -12,8 +12,20 @@ class App extends Component {
   TranslateText(userText) {
     this.translation = userText;
     // console.log(this.translation);
-    console.log(userText);
+    // console.log(userText);
     this.forceUpdate();
+    var saveWords = userText.split(" ");
+    // console.log(saveWords);
+    var changeWords = [];
+    for (let word in saveWords) {
+      // console.log(saveWords[word]);
+      var wordLength = saveWords[word].length - 1;
+      // console.log(wordLength);
+      var lastLetter = saveWords[word].substr(wordLength);
+      console.log(lastLetter);
+      changeWords.push(saveWords[word].substr(0, wordLength).concat("e "));
+      // console.log(changeWords[word]);
+    }
   }
 
   render() {
